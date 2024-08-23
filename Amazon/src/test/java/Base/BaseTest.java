@@ -41,11 +41,11 @@ public class BaseTest {
 			driver.get(prop.getProperty("url"));// config properties
 		}
 	}
-/*
+
 	@AfterTest
 	public void tearDown() {
 		driver.close();
 		System.out.println("Teardown Sucessfully");
 	}
-*/
+
 }
