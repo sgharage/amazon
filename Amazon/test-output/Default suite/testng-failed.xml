@@ -6,7 +6,7 @@
       <class name="TestCases.amazonLoginPage">
         <methods>
           <include name="login"/>
-          <include name="tearDown"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- TestCases.amazonLoginPage -->
     </classes>

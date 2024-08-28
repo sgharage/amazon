@@ -1,0 +1,36 @@
+package TestCases;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import Base.BaseTest;
+
+public class amazonLoginPage extends BaseTest {
+ 
+	@Test (priority = 1)
+	public static void Invalid_user_name() throws InterruptedException {
+		System.out.println("enter in loop");
+		driver.findElement(By.id(Loc.getProperty("sign_in"))).click();
+		driver.findElement(By.xpath(Loc.getProperty("login"))).sendKeys("abc@12");
+		Thread.sleep(1000);
+		driver.findElement(By.id(Loc.getProperty("Click_Continue"))).click();
+		//driver.close();
+		
+	}
+	
+	@Test (priority =2) 
+	
+	public static void valid_user_name() throws InterruptedException {
+		System.out.println("enter in loop1");
+		
+		driver.findElement(By.id(Loc.getProperty("sign_in"))).click();
+		driver.findElement(By.xpath(Loc.getProperty("login"))).sendKeys("sarikagharage8@gmail.com");
+		Thread.sleep(4000);
+		driver.findElement(By.id(Loc.getProperty("Click_Continue"))).click();
+		
+		driver.findElement(By.id(Loc.getProperty("login_password"))).sendKeys("123@asd");
+		Thread.sleep(4000);
+		driver.findElement(By.id(Loc.getProperty("signInSubmit"))).click();
+
+	}
+}

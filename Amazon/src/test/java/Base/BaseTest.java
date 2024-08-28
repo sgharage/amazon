@@ -7,8 +7,8 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -17,20 +17,24 @@ public class BaseTest {
 	public static Properties prop = new Properties();
 	public static FileReader fr;
 	public static Properties Loc = new Properties();
-	
-	
-	@BeforeTest
+	public static FileReader Locator;
+
+	@BeforeMethod
+
 	public void setup() throws IOException {
 		if (driver == null) {
 			// check the location of the file)
 			System.out.println("The Path is: " + System.getProperty("user.dir"));
 			FileReader fr = new FileReader(
 					System.getProperty("user.dir") + "\\src\\test\\resources\\configfiles\\Config.properties");
-		//	FileReader fr = new FileReader ("D:\\Sarika\\selenium project\\Amazon_TestAutomation\\Amazon\\src\\test\\resources\\ConfigFiles\\config.properties");
 			prop.load(fr);
+
+			FileReader Locator = new FileReader(
+					System.getProperty("user.dir") + "\\src\\test\\resources\\configfiles\\Locators.properties");
+			Loc.load(Locator);
 		}
 		if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
-		//	WebDriverManager.chromedriver().setup();
+			// WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(prop.getProperty("url"));// config properties
@@ -42,7 +46,8 @@ public class BaseTest {
 		}
 	}
 
-	@AfterTest
+	@AfterMethod
+
 	public void tearDown() {
 		driver.close();
 		System.out.println("Teardown Sucessfully");

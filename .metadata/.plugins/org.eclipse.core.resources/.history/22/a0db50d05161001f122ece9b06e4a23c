@@ -1,0 +1,24 @@
+package TestCases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import Base.BaseTest;
+
+public class amazonLoginPage extends BaseTest {
+
+	@Test
+	public static void login() throws InterruptedException {
+		System.out.println("enter in loop");
+		driver.findElement(By.id(Loc.getProperty("sign_in"))).click();
+		//driver.findElement(By.id(Loc.getProperty("login"))).sendKeys("abc@12");
+		Thread.sleep(4000);
+		driver.findElement(By.id(Loc.getProperty("Click_Continue"))).click();
+		
+		////input[@type = 'submit']
+		//;continue-announce
+	}
+}
