@@ -1,0 +1,11 @@
+package TestCases;
+
+import org.testng.annotations.Test;
+
+public class amazonHomePage {
+  @Test
+  public void verifyAmazonLogo() {
+	  
+	  
+  }
+}

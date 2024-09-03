@@ -1,0 +1,15 @@
+package TestCases;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import Base.BaseTest;
+
+public class amazonSearchPage extends amazonLoginPage {
+  @Test
+  public void verifyAmazonSearch() {
+	  driver.findElement(By.id(Loc.getProperty("search_box"))).sendKeys("Watch");
+	  
+	  
+  }
+}

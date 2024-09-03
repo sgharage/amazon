@@ -1,0 +1,13 @@
+#amazonLoginPage Locators
+sign_in = nav-link-accountList-nav-line-1
+login = //input[@type='email']
+Click_Continue1 = input[@type = 'submit']
+Click_Continue = continue
+login_password = ap_password
+Sign_in = signInSubmit
+
+alert_message = //*[@id="invalid-email-alert"]/div/div
+
+# amazonHomePage Locators
+
+

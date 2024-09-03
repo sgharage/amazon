@@ -59,7 +59,7 @@ public class amazonLoginPage extends BaseTest {
 		Thread.sleep(2000);
 		driver.findElement(By.id(Loc.getProperty("login_password"))).sendKeys("Sarika@1205");
 		driver.findElement(By.id(Loc.getProperty("Sign_in"))).click();
-		Thread.sleep(3000);
+
 	}
 
 }

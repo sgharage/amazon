@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestCases.amazonLoginPage">
+      <class name="TestCases.amazonSearchPage">
         <methods>
-          <include name="Invalid_user_name"/>
+          <include name="verifyAmazonSearch"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- TestCases.amazonLoginPage -->
+      </class> <!-- TestCases.amazonSearchPage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

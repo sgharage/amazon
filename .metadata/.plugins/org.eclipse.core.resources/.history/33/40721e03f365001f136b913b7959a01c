@@ -1,0 +1,23 @@
+package TestCases;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+public class amazonSearchPage extends amazonLoginPage {
+	@Test
+  public void verifyAmazonSearch() throws InterruptedException {
+	  Thread.sleep(2000);
+	  driver.findElement(By.id(Loc.getProperty("search_box"))).sendKeys("Watch");
+	  
+	  
+/*	  
+		<class name="TestCases.amazonSearchPage">
+		<methods>
+			<include name="verifyAmazonSearch" />
+		</methods>
+	</class>
+</classes>
+	  */
+	  
+  }
+}

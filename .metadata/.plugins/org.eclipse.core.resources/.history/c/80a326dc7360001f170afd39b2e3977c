@@ -1,9 +1,0 @@
-package Utilities;
-
-public class ReadpropertyFile {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

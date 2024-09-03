@@ -1,0 +1,12 @@
+package TestCases;
+
+import org.testng.annotations.Test;
+
+public class amazonHomePage extends amazonLoginPage{
+  @Test
+	public void verifyHomePage() {
+		System.out.println("Page Url is: " + driver.getCurrentUrl());
+		System.out.println("Page Title is: " + driver.getTitle());
+	}
+
+}

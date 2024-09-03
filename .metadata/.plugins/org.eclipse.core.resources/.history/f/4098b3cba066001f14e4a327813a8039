@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+
+		<classes>
+			<class name="TestCases.amazonLoginPage">
+				<methods>
+					<exclude name="Invalid_user_name" />
+					<exclude name="Invalid_Password" />
+					<include name="Valid_loginData" />
+				</methods>
+			</class>
+
+
+			<class name="TestCases.amazonLoginPage">
+				<methods>
+					<include name="verifyHomePage" />
+					<include name="verifyDeliveryAddress" />
+				</methods>
+			</class>
+
+
+<!-- 			<class name="TestCases.amazonSearchPage">
+				<methods>
+					<include name="verifyHomePage" />
+					<include name="verifyAmazonSearch" />
+				</methods>
+			</class>
+ -->
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

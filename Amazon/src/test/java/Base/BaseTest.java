@@ -7,8 +7,9 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -19,7 +20,7 @@ public class BaseTest {
 	public static Properties Loc = new Properties();
 	public static FileReader Locator;
 
-	@BeforeMethod
+	@BeforeSuite
 
 	public void setup() throws IOException {
 		if (driver == null) {
@@ -46,11 +47,11 @@ public class BaseTest {
 		}
 	}
 
-	@AfterMethod
-
-	public void tearDown() {
-		driver.close();
-		System.out.println("Teardown Sucessfully");
-	}
+//	@AfterSuite
+//
+//	public void tearDown() {
+//		driver.close();
+//		System.out.println("Teardown Sucessfully");
+//	}
 
 }

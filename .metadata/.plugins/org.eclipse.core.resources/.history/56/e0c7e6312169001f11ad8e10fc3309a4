@@ -1,0 +1,39 @@
+package TestCases;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class amazonHomePage extends amazonLoginPage {
+	@Test
+	public void verifyHomePage() {
+		System.out.println("Page Url is: " + driver.getCurrentUrl());
+		System.out.println("Page Title is: " + driver.getTitle());
+	}
+
+	@Test
+	public void verifyDeliveryAddress() {
+		// By finding all the web elements using iframe tag
+		List<WebElement> iframeElements = driver.findElements(By.tagName("iframe"));
+		System.out.println("Total number of iframes are: " + iframeElements);
+		
+		// Window Handling
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,2000)");
+		
+		
+//  		WebElement deli_add = driver.findElement(By.id(Loc.getProperty("delivery_add")));
+//  		deli_add.click();
+
+		// javascriptExecutor js = (javascriptExecutor) driver;
+
+//  		WebElement done_btn = driver.findElement(By.xpath(Loc.getProperty("btn_Done")));
+//  		done_btn.click();
+//  		
+
+	}
+
+}
